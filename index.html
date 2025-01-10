@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Agriculture Production Prediction</h1>
+        <form action="/predict" method="POST">
+            <label for="state">State Name:</label>
+            <input type="text" id="state" name="State_Name" required>
+
+            <label for="district">District Name:</label>
+            <input type="text" id="district" name="District_Name" required>
+
+            <label for="year">Crop Year:</label>
+            <input type="text" id="year" name="Crop_Year" required>
+
+            <label for="season">Season:</label>
+            <select id="season" name="Season" required>
+                <option value="Kharif">Kharif</option>
+                <option value="Rabi">Rabi</option>
+                <option value="Summer">Summer</option>
+                <option value="Winter">Winter</option>
+            </select>
+
+            <label for="crop">Crop:</label>
+            <input type="text" id="crop" name="Crop" required>
+
+            <label for="area">Area (in hectares):</label>
+            <input type="text" id="area" name="Area" required>
+
+            <input type="submit" value="Predict Production">
+        </form>
+    </div>
+</body>
+</html>
